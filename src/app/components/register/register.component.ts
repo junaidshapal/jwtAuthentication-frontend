@@ -17,7 +17,7 @@ export class RegisterComponent {
     });
   }
 
-  get formControls() {
+  get formControls(){
     return this.registerForm.controls;
   }
 
