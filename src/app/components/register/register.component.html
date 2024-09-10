@@ -1,17 +1,17 @@
-<div class="container">
+
+<div class="col-md-6 container">
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div>
-      <label for="email">Email</label>
-      <input type="email" id="email" formControlName="email" />
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter username">
       <div *ngIf="isSubmitted && formControls['email'].errors">
         <small *ngIf="formControls['email'].errors?.['required']">Email is required</small>
         <small *ngIf="formControls['email'].errors?.['email']">Invalid email format</small>
       </div>
-    </div>
-
-    <div>
-      <label for="password">Password</label>
-      <input type="password" id="password" formControlName="password" />
+        </div>
+    <div class="mt-2 form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
       <div *ngIf="isSubmitted && formControls['password'].errors">
         <small *ngIf="formControls['password'].errors?.['required']">Password is required</small>
         <small *ngIf="formControls['password'].errors?.['minlength']">
@@ -19,16 +19,15 @@
         </small>
       </div>
     </div>
-
-    <div>
-      <label for="confirmPassword">Confirm Password</label>
-      <input type="password" id="confirmPassword" formControlName="confirmPassword" />
+    <div class="mt-2 form-group">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="Password">
       <div *ngIf="isSubmitted && formControls['confirmPassword'].errors">
-        <small *ngIf="formControls['confirmPassword'].errors?.['required']">Confirmation password is required</small>
+        <small *ngIf="formControls['confirmPassword'].errors?.['required']">Confirm password is required</small>
         <small *ngIf="registerForm.errors?.['mismatch']">Passwords do not match</small>
       </div>
     </div>
-
-    <button type="submit">Register</button>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    <a routerLink="/login">Login</a>
   </form>
 </div>

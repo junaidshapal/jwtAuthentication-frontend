@@ -1,8 +1,111 @@
-<form (submit)="login()">
-    <label>Email:</label>
-    <input type="text" [(ngModel)]="loginData.UserName" name="email" required />
-    <label>Password:</label>
-    <input type="password" [(ngModel)]="loginData.Password" name="password" required />
-    <button type="submit">Login</button>
-  </form>
-  
+
+
+  <head>
+    <style>
+        body{
+            font-family: Arial,  sans-serif;
+            background: rgb(8,88,133);
+            background: linear-gradient(90deg, rgba(8,88,133,1) 8%, rgba(9,121,90,1) 100%, rgba(0,212,255,1) 100%);
+            text-align: center;
+            margin-top: 100px;
+            color: #fff;
+        }
+        .login-form{
+            width: 500px;
+            margin: 0 auto;
+            background: rgb(7,54,74);
+            background: linear-gradient(90deg, rgba(7,54,74,1) 7%, rgba(5,62,49,1) 100%, rgba(9,121,76,1) 100%, rgba(0,212,255,1) 100%);
+            padding: 35px; 
+            border-radius: 15px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+        .form-header{
+            margin-top: 20px;
+            padding-bottom: 10px;
+        }
+        .form-header h3{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-header p{
+            color: #ccc;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .form-group{
+            margin-top: 15px;
+            padding-bottom: 10px;
+        }
+        .form-group label{
+            display: block;
+            text-align: left;
+            margin-bottom:5px;
+            padding-left: 38px;
+        }
+        .form-group input{
+            width: 85%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            
+        }
+        .remember-me{
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #fff;
+            padding-left: 32px;
+
+        }
+        .remember-me a{
+            color: rgba(255, 255, 255, 0.849);
+            text-decoration: none;
+            padding-right: 30px;
+        }
+        .loginBtn {
+            width: 85%;
+            background-color: #00074b;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .link {
+            margin-top: 15px;
+            display: block;
+            color: #fff;
+            padding-bottom: 10px;
+        }
+        .link a{
+            text-decoration: none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+     <div class="login-form">
+        <form (submit)="login()">
+            <div class="form-header">
+                <h3>Sign in</h3>
+                <p>Sign in with your username and password</p>
+            </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input [(ngModel)]="loginData.UserName" type="text" id="username" name="username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input [(ngModel)]="loginData.Password" type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="loginBtn mt-3">Login</button>
+                <div class="link">
+                    <a routerLink="/register">Register here</a>
+                </div>
+        </form>
+     </div>
+</body>
