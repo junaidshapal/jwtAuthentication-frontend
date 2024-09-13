@@ -1,2 +1,20 @@
-<h1 class="text-center">Welcome to the Jwt Authentication</h1>
-<button class="btn btn-primary" (click)="logout()">Logout</button>
+<!-- <h1 class="text-center">Welcome to the Jwt Authentication</h1>
+<button class="btn btn-primary" (click)="logout()">Logout</button> -->
+
+
+<div class="main-div d-flex flex-column vh-100 sidebar" [ngStyle]="{ backgroundColor: 'royalblue' }">
+    <div class="p-3 text-white border-bottom">
+      <h4 class="mb-0">
+        <strong>Jwt Auth</strong>
+      </h4>
+    </div>
+    <nav class="nav flex-column p-3 flex-grow-1">
+      <a class="nav-link text-white" >Home</a>
+      <a class="nav-link text-white" >Contact</a>
+    </nav>
+    <div class="mt-auto p-3">
+      <a class="nav-link bg-danger text-white logout" (click)="logout()" >Logout</a>
+    </div>
+  </div>
+
+  
