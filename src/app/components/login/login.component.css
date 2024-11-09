@@ -32,12 +32,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #555;
-}
+
 
 .form-group input {
     width: 100%;
