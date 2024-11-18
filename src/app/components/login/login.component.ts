@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-  
+  //Credentials for login 
   loginData = { UserName: ' ', Password: ' ' };
 
 constructor(private authService: AuthService, private router: Router) {}
