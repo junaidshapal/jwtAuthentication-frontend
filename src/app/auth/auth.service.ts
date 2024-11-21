@@ -37,12 +37,6 @@ export class AuthService {
     localStorage.removeItem('jwtToken');
   }
 
-  // Check if user is authenticated
-  // isAuthenticated(): boolean {
-  //   const token = localStorage.getItem('jwtToken');
-  //   return token != null && !this.jwtHelper.isTokenExpired(token);
-  // }
-
   isAuthenticated(): boolean {
     return !!localStorage.getItem('jwtToken');
   }
